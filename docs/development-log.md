@@ -33,3 +33,11 @@ git commit history.
 - Implemented dot_product and euclidean_norm from scratch
 - 9 tests passing (basic, edge cases, NumPy verification)
 - First real Flagship implementation committed
+
+
+## 2026-09-13 (Sunday) | Phase 1 Session 2 complete
+
+- Implemented four matrix norms from scratch: Frobenius, spectral, infinity, one
+- All functions include input validation (raises ValueError on heterogeneous matrices)
+- Spectral norm optimized to compute smaller of A@A^T or A^T@A based on matrix dimensions
+- 24 tests passing

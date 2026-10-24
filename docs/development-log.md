@@ -41,3 +41,13 @@ git commit history.
 - All functions include input validation (raises ValueError on heterogeneous matrices)
 - Spectral norm optimized to compute smaller of A@A^T or A^T@A based on matrix dimensions
 - 24 tests passing
+
+
+## 2026-10-20 (Monday) | Phase 1 Session 3 complete
+
+- Implemented LU decomposition using Doolittle method (unit diagonal on L)
+- Function validates square input (raises ValueError on non-square matrices)
+- Zero pivot detection raises ZeroDivisionError when pivoting would be required
+- Returns tuple (L, U) with L lower triangular and U upper triangular such that A = LU
+- No pivoting, no system solving (deferred to Session 4)
+- 14 tests passing

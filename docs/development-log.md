@@ -51,3 +51,15 @@ git commit history.
 - Returns tuple (L, U) with L lower triangular and U upper triangular such that A = LU
 - No pivoting, no system solving (deferred to Session 4)
 - 14 tests passing
+
+
+## 2026-11-06 (Friday) | Phase 1 Session 4 complete
+
+- Implemented linear system solver using LU decomposition from Session 3
+- forward_substitution(L, B) solves LY = B for lower triangular L
+- backwards_substitution(U, Y) solves UX = Y for upper triangular U
+- linear_system_solver(A, B) orchestrates full solve, calls lu_decomposition once
+- Takes L and U directly to enable reuse in Sessions 5-10 and avoid duplicate computation
+- Input validation for dimensions and heterogeneous rows in both substitution functions
+- No pivoting (deferred to Session 5)
+- 17 tests passing 

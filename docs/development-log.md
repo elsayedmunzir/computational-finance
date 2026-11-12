@@ -63,3 +63,15 @@ git commit history.
 - Input validation for dimensions and heterogeneous rows in both substitution functions
 - No pivoting (deferred to Session 5)
 - 17 tests passing 
+
+## 2026-11-12 (Thursday) | Phase 1 Session 5 complete
+
+- Implemented PLU decomposition with partial pivoting
+- plu_decomposition(A) returns (P, L, U) such that PA = LU
+- plu_solve(A, b) solves Ax = b by calling plu_decomposition then forward and backwards substitution from Session 4
+- Partial pivoting selects largest absolute value in column as pivot
+- Row swaps tracked in P and applied to L for columns already computed
+- Input validation for non-square, heterogeneous, non-numeric entries, singular matrices, zero pivots, and incompatible A/b dimensions
+- Single element matrix handling with explicit zero check
+- Scipy benchmark tests included for both decomposition and solve
+- 16 tests passing
